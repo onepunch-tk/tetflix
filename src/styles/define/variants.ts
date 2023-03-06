@@ -12,3 +12,12 @@ export const logoVariants:Variants = {
         }
     }
 };
+
+export const navVariants:Variants = {
+    [EVarLabels.init]:{
+        backgroundColor: "rgba(0,0,0,0)"
+    },
+    [EVarLabels.animate]:{
+        backgroundColor: "rgba(0,0,0,1)"
+    }
+}
