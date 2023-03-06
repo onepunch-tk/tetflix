@@ -2,7 +2,7 @@ import {motion, useAnimation, useScroll} from "framer-motion";
 import styled from "styled-components";
 import {FLEX_BOX, FLEX_BOX_COL} from "../../styles/modules";
 import {useMatch, useNavigate} from "react-router-dom";
-import {EPath, EVarLabels} from "../../utils/define/enums";
+import {EPath, EVarLabels} from "../../modules/define/enums";
 import {logoVariants, navVariants} from "../../styles/define/variants";
 import {useState} from "react";
 

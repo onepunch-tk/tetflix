@@ -1,5 +1,5 @@
 import {Variants} from "framer-motion";
-import {EVarLabels} from "../../utils/define/enums";
+import {EVarLabels} from "../../modules/define/enums";
 
 export const logoVariants:Variants = {
     [EVarLabels.init]:{
@@ -20,4 +20,37 @@ export const navVariants:Variants = {
     [EVarLabels.animate]:{
         backgroundColor: "rgba(0,0,0,1)"
     }
+}
+
+export const sliderRowVariants:Variants = {
+    [EVarLabels.init]:(windowSize) =>({
+        x:windowSize - 15
+    }),
+    [EVarLabels.animate]:{
+        x:0
+    },
+    [EVarLabels.exit]:(windowSize) =>({
+        x:-windowSize + 15
+    })
+}
+
+export const sliderItemVariants:Variants = {
+    [EVarLabels.hover]:{
+        scale:1.3,
+        y:-50,
+        transition:{
+            delay:0.5,
+            duration:0.3,
+            type:"tween",
+            delayChildren:0.5,
+            staggerChildren:0.3,
+
+        }
+    },
+}
+
+export const sliderItemInfoVariants:Variants = {
+    [EVarLabels.hover]:{
+        opacity:1
+    },
 }

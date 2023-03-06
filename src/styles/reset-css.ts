@@ -41,6 +41,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     font-family: 'Source Sans Pro', sans-serif;
+    color: ${props => props.theme.white.darker};
+    background-color: black;
   }
 
   ol, ul {

@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, createHashRouter} from "react-router-dom";
 import Root from "./Root";
 import Home from "./screens/Home";
 import Tv from "./screens/Tv";
@@ -7,19 +7,25 @@ import Header from "./components/Header";
 
 const BASE_URL = document.URL;
 (() => console.log("Base URL : ", BASE_URL))();
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: (<Root/>),
 
         children: [
             {
-                index: true,
-                element: <Home/>
+                path: "",
+                element: <Home/>,
+                children:[
+                    {
+                        path:"movies/:movieId",
+                        element:<Home/>
+                    }
+                ]
             },
             {
                 path: "tv",
-                element: <Tv/>
+                element: <Tv/>,
             },
             {
                 path: "search",
