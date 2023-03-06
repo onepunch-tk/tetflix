@@ -3,7 +3,6 @@ import Root from "./Root";
 import Home from "./screens/Home";
 import Tv from "./screens/Tv";
 import Search from "./screens/Search";
-import Header from "./components/Header";
 
 const BASE_URL = document.URL;
 (() => console.log("Base URL : ", BASE_URL))();
